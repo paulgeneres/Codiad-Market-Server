@@ -1,2 +1,4 @@
 data/*
 !data/.htaccess
+!data/plugins.json
+!data/themes.json
