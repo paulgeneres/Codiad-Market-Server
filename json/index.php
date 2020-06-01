@@ -63,8 +63,8 @@
             }
         }
         
-        $plugins = json_decode(file_get_contents('http://codiad.com/plugins.json'),true);
-        $themes = json_decode(file_get_contents('http://codiad.com/themes.json'),true);
+        $plugins = json_decode(file_get_contents('../data/plugins.json'),true);
+        $themes = json_decode(file_get_contents('../data/themes.json'),true);
         $tmp = array();
         
         foreach($plugins as $plugin) {

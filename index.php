@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="Codiad is an open source, web-based, cloud IDE and code editor with minimal footprint and requirements"
     <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="http://codiad.com/stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="http://codiad.com/stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="http://codiad.com/stylesheets/print.css" media="print" />
-    <!--<link rel="stylesheet" type="text/css" href="http://codiad.com/stylesheets/icons.css" media="screen" />-->
+    <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print" />
+    <!--<link rel="stylesheet" type="text/css" href="/stylesheets/icons.css" media="screen" />-->
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -75,7 +75,7 @@
             <?php
                 
                 
-                $plugins = json_decode(file_get_contents('http://codiad.com/plugins.json'),true);
+                $plugins = json_decode(file_get_contents('./data/plugins.json'),true);
                 $data = array();
                 foreach($plugins as $plugin) {
                     if(!isset($plugin['category'])) {
@@ -87,7 +87,7 @@
                     array_push($data[$plugin['category']], $plugin);
                 }
                 ksort($data);
-                //$themes = json_decode(file_get_contents('http://codiad.com/themes.json'),true);
+                //$themes = json_decode(file_get_contents('./data/themes.json'),true);
             
                 foreach ($data as $category=>$plugins) {
                     echo '<tr>';
